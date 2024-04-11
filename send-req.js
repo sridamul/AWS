@@ -1,6 +1,8 @@
 const axios = require('axios');
 
-const DOMAIN = 'AutoScalingWithLoadBalancing-1-858215853.ap-south-1.elb.amazonaws.com';
+// AutoScalingWithLoadBalancing-1-858215853.ap-south-1.elb.amazonaws.com
+
+const DOMAIN = 'http://AutoScalingWithLoadBalancing-1-858215853.ap-south-1.elb.amazonaws.com';
 
 async function sendRequests(val) {
     while (true) {
@@ -15,7 +17,7 @@ async function sendRequests(val) {
 }
 
 async function main() {
-    const concurrency = 150;
+    const concurrency = 300;
     const promises = [];
     
     for (let i = 0; i < concurrency; i++) {
